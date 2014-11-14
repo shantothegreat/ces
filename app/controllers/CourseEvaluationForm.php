@@ -18,9 +18,23 @@ class CourseEvaluationForm extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create_course()
 	{
 		//
+		
+	}
+
+	/**
+	 * Process the form to make 
+	 * new course with course_code, course_name, year, semester
+	 * create student mail list
+	 * create hash code and their validation period
+	 *
+	 * @return Response
+	 */
+	public function process()
+	{
+		
 	}
 
 

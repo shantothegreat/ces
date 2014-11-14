@@ -28,3 +28,23 @@ Route::post('users/forgot_password', 'UsersController@doForgotPassword');
 Route::get('users/reset_password/{token}', 'UsersController@resetPassword');
 Route::post('users/reset_password', 'UsersController@doResetPassword');
 Route::get('users/logout', 'UsersController@logout');
+
+
+Route::group(array('prefix' => 'admin'), function()
+{
+	
+	Route::group(array('prefix' => 'create'), function()
+	{
+		Route::get('course','AdminCourseController@create');
+		Route::post('course','AdminCourseController@store');
+		
+		Route::get('department','AdminDepartmentController@create');
+		Route::post('department','AdminDepartmentController@store');
+
+		Route::get('instructor','AdminInstructorController@create');
+		Route::post('instructor','AdminInstructorController@store');
+	});
+
+
+});
+
